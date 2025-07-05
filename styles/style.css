@@ -767,6 +767,7 @@ body {
   grid-row-end: -1;
   flex-wrap: nowrap;
   overflow-x: auto;
+  padding-bottom:124px;
 }
 .reviews-cards-link {
   display: block;
