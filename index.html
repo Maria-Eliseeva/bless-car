@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Автоподбор</title>
+    <link rel="stylesheet" href="./fonts/fonts.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="opening-hours">
+        <p class="opening-hours-text">Работаем по Владивостоку:</p>
+        <p>
+          <time datetime="08:00">08:00</time>–<time datetime="22:00"
+            >22:00</time
+          >
+          [сейчас 15:40]
+        </p>
+      </div>
+      <nav class="navy">
+        <ul class="header__links-list">
+          <li class="header__links-list-item">
+            <a class="text__link" href="">О нас</a>
+          </li>
+          <li class="header__links-list-item">
+            <a class="text__link" href="">Схема работы</a>
+          </li>
+          <li class="header__links-list-item">
+            <a class="text__link" href="">Договор</a>
+          </li>
+          <li class="header__links-list-item">
+            <a class="text__link" href="">Видео</a>
+          </li>
+          <li class="header__links-list-item">
+            <a class="text__link" href="">Вопросы и ответы</a>
+          </li>
+        </ul>
+      </nav>
+      <ul class="social-list">
+        <li class="social-list-item">
+          <a href="">
+            <img
+              class="social-icon"
+              alt="логотип инстаграм"
+              src="./images/inst.png"
+            />
+          </a>
+        </li>
+        <li class="social-list-item">
+          <a href="">
+            <img
+              class="social-icon"
+              alt="логотип телеграм"
+              src="./images/telegram.png"
+            />
+          </a>
+        </li>
+        <li class="social-list-item">
+          <a href="">
+            <img
+              class="social-icon"
+              alt="логотип ютуб"
+              src="./images/youtube.png"
+            />
+          </a>
+        </li>
+        <li class="social-list-item">
+          <a href="">
+            <img class="social-icon" alt="логотип вк" src="./images/vk.png" />
+          </a>
+        </li>
+      </ul>
+    </header>
+    <div class="background"></div>
+    <main class="main">
+      <section class="main-menu">
+        <a class="logo" href="">
+          <img src="./images/logo.png" class="logo-image" alt="логотип" />
+        </a>
+        <button class="main-menu-button"></button>
+        <ul class="main-menu-list">
+          <li class="main-menu-list-item">
+            <label for="provider">Услуги</label>
+            <select
+              id="provider"
+              name="provider"
+              class="main-menu-list-item-point"
+            ></select>
+          </li>
+          <li class="main-menu-list-item">
+            <label for="services">Сервисы</label>
+            <select
+              id="services"
+              name="services"
+              class="main-menu-list-item-point"
+            ></select>
+          </li>
+          <li class="main-menu-list-item">Новости</li>
+          <li class="main-menu-list-item">Отзывы</li>
+          <li class="main-menu-list-item">Контакты</li>
+        </ul>
+        <div class="main-menu-order">
+          <div class="main-menu-order-description">
+            <p class="main-menu-order-description big_margin">
+              Cвязаться с нами:
+            </p>
+            <span class="main-menu-order-number">+7 (3823) 00-00-00</span>
+          </div>
+          <button class="main-menu-order-button">заказать в 1 клик</button>
+        </div>
+      </section>
+      <section class="main-start-page">
+        <a class="main-start-page-link" href="">
+          <img
+            class="main-start-page-img"
+            alt="машина"
+            src="./images/car.png"
+          />
+        </a>
+        <div class="main-start-page-container">
+          <h2 class="text-header">
+            Привоз автомобиля <br />
+            <span class="text-bright"> из Японии за 25 дней </span>
+          </h2>
+          <p class="page-text">
+            <span class="text-highlight">Укажите бюджет и параметры</span>
+            интересующего вас автомобиля.
+          </p>
+          <p class="page-text">
+            <span class="text-highlight"
+              >Сотрудники Bless car подберут и отправят лучшие предложения
+            </span>
+            по вашему запросу. Вам останется только выбрать и заключить договор.
+          </p>
+
+          <div class="button_container">
+            <button class="page-button bright-button">Оставить заявку</button>
+            <button class="page-button dim-button">Подробнее</button>
+          </div>
+        </div>
+      </section>
+      <section class="about-price">
+        <h2 class="text-header">
+          <span class="text-bright">Из чего </span>
+          состоит цена
+        </h2>
+        <div class="about-price-cards">
+          <div class="card">
+            <a class="card-image-link">
+              <img class="card-image" src="./images/money-bag.png" />
+            </a>
+            <h3 class="card-title">стоимость авто в японии</h3>
+            <div class="card-text">
+              <p>
+                Стоимость авто на аукционах Японии оплачивается в иенах или
+                долларах.
+              </p>
+              <p>
+                Мы можем приобрести автомобиль на аукционах Японии конкретно под
+                Ваши запросы и пожелания
+              </p>
+              <p>
+                Мы также помогаем с оплатой инвойса и переводом денежных средств
+                в Японию
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <a class="card-image-link">
+              <img
+                class="card-image"
+                alt="наличные деньги"
+                src="./images/money.png"
+              />
+            </a>
+            <h3 class="card-title">транспортные расходы</h3>
+            <div class="card-text">
+              <p>
+                Доставка автомобиля из Японии до Вашего города складывается из
+                нескольких этапов:
+              </p>
+              <ul class="card-text-list">
+                <li>Доставка по Японии с аукционной площадки в порт</li>
+                <li>Доставка на судне из порта в Японии до Владивостока</li>
+                <li>
+                  Доставка автовозом из Владивостока до конечной точки по РФ
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="card">
+            <a class="card-image-link">
+              <img class="card-image" src="./images/russia.png" />
+            </a>
+            <h3 class="card-title">РАСХОДЫ НА ТАМОЖЕННУЮ ОЧИСТКУ В РФ</h3>
+            <div class="card-text">
+              <p>
+                Стоимость таможенной очистки автомобилей в России привязана к
+                евро. Поэтому стоимость растаможки авто будет напрямую зависеть
+                от курса евро ЦБ РФ.
+              </p>
+              <p>
+                Для получения дополнительной информации о привозе автомобиля из
+                Японии можно связаться с нашим менеджером.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="about-price-container">
+          <div class="background-tracks"></div>
+          <h2 class="text-header about-price-container-header">
+            Хотите
+            <span class="text-bright">узнать стоимость </span>
+            автомобиля?
+          </h2>
+          <div class="about-price-container-text">
+            <p class="page-text">
+              Чтобы получить
+              <span class="text-highlight">самую последнюю информацию</span>
+              о стоимости привоза авто из Японии, нужна всего одна минута!
+            </p>
+            <p class="page-text">
+              Ответьте на 5 вопросов, и мы вышлем подробную информацию о том,
+              <span class="text-highlight">
+                во сколько обойдется нужный автомобиль с доставкой в Ваш город и
+                таможенной очисткой
+              </span>
+            </p>
+          </div>
+          <button class="about-price-container-button bright-button">
+            Узнать стоимость
+          </button>
+        </div>
+      </section>
+      <section class="popular-car">
+        <h2 class="text-header">
+          Популярные автомобили
+          <span class="text-bright">из Японии</span>
+        </h2>
+        <form class="popular-car-form">
+          <label class="popular-car-form__label">
+            <input
+              type="checkbox"
+              name="carbody"
+              value="hatchback"
+              class="visually-hidden"
+            />
+            <span class="popular-car-form__label-text">хэтчбек</span>
+          </label>
+          <label class="popular-car-form__label">
+            <input
+              type="checkbox"
+              name="carbody"
+              value="sedan"
+              class="visually-hidden"
+            />
+            <span class="popular-car-form__label-text">седан</span>
+          </label>
+          <label class="popular-car-form__label">
+            <input
+              type="checkbox"
+              name="carbody"
+              value="minivan"
+              class="visually-hidden"
+            />
+            <span class="popular-car-form__label-text"
+              >УНИВЕРСАЛ / МИНИВЭН</span
+            >
+          </label>
+          <label class="popular-car-form__label">
+            <input
+              type="checkbox"
+              name="carbody"
+              value="microbus"
+              class="visually-hidden"
+            />
+            <span class="popular-car-form__label-text">микроавтобус</span>
+          </label>
+          <label class="popular-car-form__label">
+            <input
+              type="checkbox"
+              name="carbody"
+              value="suv"
+              class="visually-hidden"
+            />
+            <span class="popular-car-form__label-text">внедорожники</span>
+          </label>
+          <label class="popular-car-form__label">
+            <input
+              type="checkbox"
+              name="carbody"
+              value="electro"
+              class="visually-hidden"
+            />
+            <span class="popular-car-form__label-text">электро</span>
+          </label>
+          <label class="popular-car-form__label">
+            <input
+              type="checkbox"
+              name="carbody"
+              value="crossover"
+              class="visually-hidden"
+            />
+            <span class="popular-car-form__label-text">кроссовер</span>
+          </label>
+        </form>
+        <div class="page-cards">
+          <label class="card">
+            <input
+              type="checkbox"
+              value="ToyotaPriusAlpha1"
+              class="page-cards-checkbox"
+            />
+            <a class="card-image-link">
+              <img class="card-image" src="./images/pop-car.png" />
+            </a>
+            <h3 class="card-title">Toyota Prius Alpha</h3>
+            <div class="card-text">
+              <p>Honda Fit 2019 год</p>
+              <p>Кузов GK3</p>
+              <p>Вариатор, передний привод</p>
+              <p>Объем 1300 сс</p>
+            </div>
+            <button class="popular-car__button bright-button active">
+              от 1 030 000 ₽
+            </button>
+            <button class="popular-car__button bright-button no-active">
+              Заказать
+            </button>
+          </label>
+          <label class="card">
+            <input
+              type="checkbox"
+              value="ToyotaPriusAlpha2"
+              class="page-cards-checkbox"
+            />
+            <a class="card-image-link">
+              <img class="card-image" src="./images/pop-car.png" />
+            </a>
+            <h3 class="card-title">Toyota Prius Alpha</h3>
+            <div class="card-text">
+              <p>Honda Fit 2019 год</p>
+              <p>Кузов GK3</p>
+              <p>Вариатор, передний привод</p>
+              <p>Объем 1300 сс</p>
+            </div>
+            <button class="popular-car__button bright-button active">
+              от 1 030 000 ₽
+            </button>
+            <button class="popular-car__button bright-button no-active">
+              Заказать
+            </button>
+          </label>
+          <label class="card">
+            <input
+              type="checkbox"
+              value="ToyotaPriusAlpha3"
+              class="page-cards-checkbox"
+            />
+            <a class="card-image-link">
+              <img class="card-image" src="./images/pop-car.png" />
+            </a>
+            <h3 class="card-title">Toyota Prius Alpha</h3>
+            <div class="card-text">
+              <p>Honda Fit 2019 год</p>
+              <p>Кузов GK3</p>
+              <p>Вариатор, передний привод</p>
+              <p>Объем 1300 сс</p>
+            </div>
+            <button class="popular-car__button bright-button active">
+              от 1 030 000 ₽
+            </button>
+            <button class="popular-car__button bright-button no-active">
+              Заказать
+            </button>
+          </label>
+          <label class="card">
+            <input
+              type="checkbox"
+              value="ToyotaPriusAlpha4"
+              class="page-cards-checkbox"
+            />
+            <a class="card-image-link">
+              <img class="card-image" src="./images/pop-car.png" />
+            </a>
+            <h3 class="card-title">Toyota Prius Alpha</h3>
+            <div class="card-text">
+              <p>Honda Fit 2019 год</p>
+              <p>Кузов GK3</p>
+              <p>Вариатор, передний привод</p>
+              <p>Объем 1300 сс</p>
+            </div>
+            <button class="popular-car__button bright-button active">
+              от 1 030 000 ₽
+            </button>
+            <button class="popular-car__button bright-button no-active">
+              Заказать
+            </button>
+          </label>
+          <label class="card">
+            <input
+              type="checkbox"
+              value="ToyotaPriusAlpha5"
+              class="page-cards-checkbox"
+            />
+            <a class="card-image-link">
+              <img class="card-image" src="./images/pop-car.png" />
+            </a>
+            <h3 class="card-title">Toyota Prius Alpha</h3>
+            <div class="card-text">
+              <p>Honda Fit 2019 год</p>
+              <p>Кузов GK3</p>
+              <p>Вариатор, передний привод</p>
+              <p>Объем 1300 сс</p>
+            </div>
+            <button class="popular-car__button bright-button active">
+              от 1 030 000 ₽
+            </button>
+            <button class="popular-car__button bright-button no-active">
+              Заказать
+            </button>
+          </label>
+          <label class="card">
+            <input
+              type="checkbox"
+              value="ToyotaPriusAlpha5"
+              class="page-cards-checkbox"
+            />
+            <a class="card-image-link">
+              <img class="card-image" src="./images/pop-car.png" />
+            </a>
+            <h3 class="card-title">Toyota Prius Alpha</h3>
+            <div class="card-text">
+              <p>Honda Fit 2019 год</p>
+              <p>Кузов GK3</p>
+              <p>Вариатор, передний привод</p>
+              <p>Объем 1300 сс</p>
+            </div>
+            <button class="popular-car__button bright-button active">
+              от 1 030 000 ₽
+            </button>
+            <button class="popular-car__button bright-button no-active">
+              Заказать
+            </button>
+          </label>
+        </div>
+        <button class="page-button bright-button popular-car-button">
+          Заказать консультацию
+        </button>
+        <div class="popular-car-function">
+          <button class="page-button dim-button">Аукционы онлайн</button>
+          <button class="page-button dim-button">Статистика</button>
+          <button class="page-button dim-button">Калькулятор</button>
+        </div>
+      </section>
+      <section class="work-stage">
+        <h2 class="text-header">
+          Этапы
+          <span class="text-bright">нашей работы</span>
+        </h2>
+        <div class="background-tracks"></div>
+        <div class="page-cards">
+          <div class="card">
+            <p class="text-bright card-text norm-weight">1 этап</p>
+            <h4 class="card-title not-uppercase">Оставьте заявку</h4>
+            <div class="card-text norm-weight">
+              <p>Свяжемся с вами в течение 10 минут и ответим на все вопросы</p>
+            </div>
+            <button class="page-button dim-button">Оставить заявку</button>
+          </div>
+          <div class="card">
+            <p class="text-bright card-text norm-weight">2 этап</p>
+            <h4 class="card-title not-uppercase">Заключение договора</h4>
+            <div class="card-text norm-weight">
+              <p>
+                Заключаем договор без скрытых платежей и комиссий, лично в офисе
+                или по электронной почте
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <p class="text-bright card-text norm-weight">3 этап</p>
+            <h4 class="card-title not-uppercase">Подбор автомобиля</h4>
+            <div class="card-text norm-weight">
+              <p>
+                Подбираем лучший вариант автомобиля под ваш бюджет,
+                согласовываем каждый вариант
+              </p>
+            </div>
+          </div>
+          <div class="card resize">
+            <p class="text-bright card-text norm-weight">4 этап</p>
+            <h4 class="card-title not-uppercase">Детальный осмотр</h4>
+            <div class="card-text norm-weight">
+              <p>
+                Наши специалисты в Китае профессионально осматривают автомобиль
+                и высылают подробный отчет
+              </p>
+            </div>
+          </div>
+          <div class="card resize">
+            <p class="text-bright card-text norm-weight">5 этап</p>
+            <h4 class="card-title not-uppercase">Доставка и таможня</h4>
+            <div class="card-text norm-weight">
+              <p>
+                Выкупаем ваш автомобиль, доставляем во Владивосток, проходим все
+                процедуры таможенного оформления
+              </p>
+            </div>
+          </div>
+          <div class="card resize">
+            <p class="text-bright card-text norm-weight">6 этап</p>
+            <h4 class="card-title not-uppercase">Отправка по России</h4>
+            <div class="card-text norm-weight">
+              <p>
+                Доставляем автомобиль в ваш город автовозом или поездом, любой
+                транспортной компанией
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="background-tracks"></div>
+      </section>
+      <section class="benefits">
+        <h2 class="text-header">
+          Преимущества<br />
+          <span class="text-bright">работы с нами</span>
+        </h2>
+        <div class="benefits-text">
+          <h3 class="text-header benefits-title">
+            Комиссия
+            <span class="text-bright text-underline">всего 30000 рублей</span>
+          </h3>
+          <p class="card-text">Страхование вашего авто на всех этапах</p>
+        </div>
+        <div class="benefits-text">
+          <h3 class="text-header benefits-title">
+            Фото и видео
+            <span class="text-bright text-underline">отчет</span>
+          </h3>
+          <p class="card-text">Страхование вашего авто на всех этапах</p>
+        </div>
+        <div class="benefits-text">
+          <h3 class="text-header benefits-title">
+            Прозрачный
+            <span class="text-bright text-underline">договор</span>
+          </h3>
+          <p class="card-text">Менеджеры всегда на связи</p>
+        </div>
+        <div class="benefits-text">
+          <h3 class="text-header benefits-title">
+            Бесплатная
+            <span class="text-bright text-underline">стоянка</span>
+          </h3>
+          <p class="card-text">Дней доставка авто в Россию</p>
+        </div>
+        <div class="benefits-text">
+          <h3 class="text-header benefits-title">
+            Гарантированная
+            <span class="text-bright text-underline">страховка</span>
+          </h3>
+          <p class="card-text">100% страхование вашего авто на всех этапах</p>
+        </div>
+      </section>
+      <section class="reviews">
+        <div class="reviews-description">
+          <h2 class="reviews-title">
+            Фото-Отзывы<br />
+            <span class="norm-weight">наших покупателей</span>
+          </h2>
+        </div>
+        <button class="page-button reviews-button">Больше отзывов</button>
+        <div class="reviews-cards">
+          <div class="reviews-cards-link">
+            <img
+              class="reviews-cards-link-img"
+              alt="владимир, покупатель хонды"
+              src="./images/vladimir.png"
+            />
+            <div class="overlay no-active">
+              <p class="overlay-title">Владимир</p>
+              <p class="overlay-text">Honda Fit 2019 год</p>
+              <a href="" class="overlay-link">Подробнее</a>
+            </div>
+          </div>
+          <div class="reviews-cards-link">
+            <img
+              class="reviews-cards-link-img"
+              alt="покупатель мазды"
+              src="./images/customer2.png"
+            />
+            <div class="overlay no-active">
+              <p class="overlay-title">Имя</p>
+              <p class="overlay-text">Машина</p>
+              <a href="" class="overlay-link">Подробнее</a>
+            </div>
+          </div>
+          <div class="reviews-cards-link">
+            <img
+              class="reviews-cards-link-img"
+              alt="покупатель хонды"
+              src="./images/customer3.png"
+            />
+            <div class="overlay no-active">
+              <p class="overlay-title">Имя</p>
+              <p class="overlay-text">Машина</p>
+              <a href="" class="overlay-link">Подробнее</a>
+            </div>
+          </div>
+          <div class="reviews-cards-link">
+            <img
+              class="reviews-cards-link-img"
+              alt="покупатель хонды"
+              src="./images/customer4.png"
+            />
+            <div class="overlay no-active">
+              <p class="overlay-title">Имя</p>
+              <p class="overlay-text">Машина</p>
+              <a href="" class="overlay-link">Подробнее</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="youtube">
+        <h2 class="text-header">
+          Наш
+          <span class="text-bright">YouTube канал</span>
+        </h2>
+        <div class="youtube-container">
+          <div class="iframe-wrapper">
+            <iframe src="" frameboarder="0"> </iframe>
+          </div>
+          <div class="iframe-wrapper">
+            <iframe src="" frameboarder="0"> </iframe>
+          </div>
+          <div class="iframe-wrapper">
+            <iframe src="" frameboarder="0"> </iframe>
+          </div>
+        </div>
+      </section>
+      <section class="faq">
+        <h2 class="text-header">
+          <span class="text-bright">Ответы</span>
+          на популярные вопросы
+        </h2>
+        <div class="faq-item">
+          <label for="q1" class="faq-item-text">
+            Можно положить в Японии в купленное авто комплект зимней/летней
+            резины?
+          </label>
+          <div>
+            <input
+              type="checkbox"
+              value="q1"
+              name="q"
+              class="visually-hidden"
+              id="q1"
+            />
+            <span class="faq-item__pseudo-checkbox"></span>
+          </div>
+        </div>
+        <div class="faq-item-answer card-text no-active">ответ</div>
+        <div class="faq-item">
+          <label for="q2" class="faq-item-text">
+            Проверяют ли Японцы гибридную систему в автомобиле перед торгами?
+          </label>
+          <div>
+            <input
+              type="checkbox"
+              value="q2"
+              name="q"
+              class="visually-hidden"
+              id="q2"
+            />
+            <span class="faq-item__pseudo-checkbox"></span>
+          </div>
+        </div>
+        <div class="faq-item-answer card-text no-active">ответ</div>
+        <div class="faq-item">
+          <label for="q3" class="faq-item-text">
+            Почему автомобили на местном рынке стоят дешевле, чем на аукционах?
+          </label>
+          <div>
+            <input
+              type="checkbox"
+              value="q3"
+              name="q"
+              class="visually-hidden"
+              id="q3"
+            />
+            <span class="faq-item__pseudo-checkbox"></span>
+          </div>
+        </div>
+        <div class="faq-item-answer card-text no-active">
+          Стоимость автомобилей на местном рынке складывается из множества
+          аспектов: важно обращать внимание на техническое состояние, пробег,
+          историю эксплуатации и прочее. Никто из продавцов местного рынка не
+          сможет гарантировать вам честный пробег и прозрачную историю. Поэтому
+          в данном случае дешевле не равно выгоднее, лучше выбрать автомобиль с
+          прозрачной историей и в хорошем техническом состоянии, нежели взять
+          авто, который будет нуждаться в постоянном ремонте.
+        </div>
+        <div class="faq-item">
+          <label for="q4" class="faq-item-text"> Сроки доставки </label>
+          <div>
+            <input
+              type="checkbox"
+              value="q4"
+              name="q"
+              class="visually-hidden"
+              id="q4"
+            />
+            <span class="faq-item__pseudo-checkbox"></span>
+          </div>
+        </div>
+        <div class="faq-item-answer card-text no-active">ответ</div>
+        <div class="faq-item">
+          <label for="q5" class="faq-item-text">
+            Почему автомобили на местном рынке стоят дешевле, чем на аукционах?
+          </label>
+          <div>
+            <input
+              type="checkbox"
+              value="q5"
+              name="q"
+              class="visually-hidden"
+              id="q5"
+            />
+            <span class="faq-item__pseudo-checkbox"></span>
+          </div>
+        </div>
+        <div class="faq-item-answer card-text no-active">ответ</div>
+        <div class="faq-item">
+          <label for="q6" class="faq-item-text">
+            Как разобраться со всеми записями на аукционном листе?
+          </label>
+          <div>
+            <input
+              type="checkbox"
+              value="q6"
+              name="q"
+              class="visually-hidden"
+              id="q6"
+            />
+            <span class="faq-item__pseudo-checkbox"></span>
+          </div>
+        </div>
+        <div class="faq-item-answer card-text no-active">ответ</div>
+        <div class="faq-item">
+          <label for="q7" class="faq-item-text">
+            Что значит "проходной" автомобиль?
+          </label>
+          <div>
+            <input
+              type="checkbox"
+              value="q7"
+              name="q"
+              class="visually-hidden"
+              id="q7"
+            />
+            <span class="faq-item__pseudo-checkbox"></span>
+          </div>
+        </div>
+        <div class="faq-item-answer card-text no-active">ответ</div>
+        <div class="faq-item">
+          <label for="q8" class="faq-item-text">
+            Почему с некоторых аукционов машины везут дольше?
+          </label>
+          <div>
+            <input
+              type="checkbox"
+              value="q8"
+              name="q"
+              class="visually-hidden"
+              id="q8"
+            />
+            <span class="faq-item__pseudo-checkbox"></span>
+          </div>
+        </div>
+        <div class="faq-item-answer card-text no-active">ответ</div>
+        <button class="page-button bright-button faq-button">
+          Заказать консультацию
+        </button>
+      </section>
+      <section class="feedback">
+        <div class="background background-japan"></div>
+        <form class="feedback-form">
+          <h2 class="text-header">
+            Остались
+            <span class="text-bright">вопросы?</span>
+          </h2>
+          <p class="card-text feedback-title-caption">
+            Заполните форму и мы свяжемся с вами
+          </p>
+          <label class="card-text">
+            <input
+              type="name"
+              class="feedback-form-field"
+              placeholder="Ваше имя"
+              name="name"
+              id="name"
+            />
+          </label>
+          <label class="card-text">
+            <input
+              type="tel"
+              class="feedback-form-field"
+              placeholder="Ваш номер телефона"
+              name="tel"
+              id="tel"
+            />
+          </label>
+          <label class="card-text">
+            <input
+              type="text"
+              class="feedback-form-field"
+              placeholder="Марка и модель авто"
+              name="text"
+              id="text"
+            />
+          </label>
+          <button class="page-button bright-button feedback-button">
+            Отправить
+          </button>
+          <p class="card-text caption">
+            Нажимая на кнопку «ОТПРАВИТЬ», вы даёте согласие на
+            <a href="">обработку персональных данных</a>
+          </p>
+        </form>
+        <div class="feedback-contacts">
+          <h2 class="text-header">Как связаться с нами</h2>
+          <div class="feedback-text">
+            <h4 class="feedback-title">E-mail:</h4>
+            <p>Blesscar@mail.com</p>
+          </div>
+          <div class="feedback-text">
+            <h4 class="feedback-title">Телефон:</h4>
+            <p>+ 7 (000) 000-00-00</p>
+          </div>
+          <div class="feedback-text">
+            <h4 class="feedback-title">Адрес:</h4>
+            <p>г. Чита ул. Ленина, 162А офис 26</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <a class="logo" href="">
+        <img src="./images/logo.png" class="logo-image" alt="логотип" />
+      </a>
+      <ul class="social-list">
+        <li class="social-list-item">
+          <a href="">
+            <img
+              class="social-icon"
+              alt="логотип инстаграм"
+              src="./images/inst.png"
+            />
+          </a>
+        </li>
+        <li class="social-list-item">
+          <a href="">
+            <img
+              class="social-icon"
+              alt="логотип телеграм"
+              src="./images/telegram.png"
+            />
+          </a>
+        </li>
+        <li class="social-list-item">
+          <a href="">
+            <img
+              class="social-icon"
+              alt="логотип ютуб"
+              src="./images/youtube.png"
+            />
+          </a>
+        </li>
+      </ul>
+      <div class="footer-text">
+        <p class="card-text">2023 © Bless car</p>
+        <a href="" class="card-text">Политика конфиденциальности</a>
+      </div>
+    </footer>
+  </body>
+</html>

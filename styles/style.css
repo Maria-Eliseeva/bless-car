@@ -1,0 +1,1451 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  block-size: 100%;
+  margin: 0;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+blockquote,
+fieldset,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+a {
+  color: inherit;
+}
+
+body {
+  position: relative;
+  background-color: #171718;
+  margin: 0px;
+}
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.header {
+  padding-right: clamp(0.875rem, -2.159rem + 12.945vw, 13.375rem);
+  padding-left: clamp(0.875rem, -5.385rem + 24.019vw, 23.438rem);
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: clamp(0.313rem, -0.84rem + 4.919vw, 5.063rem);
+  padding-bottom: 15px;
+  background-color: #1f1f21;
+  padding-top: 14px;
+}
+
+.main {
+  padding-right: clamp(0.875rem, -2.159rem + 12.945vw, 13.375rem);
+  padding-left: clamp(0.875rem, -4.371rem + 22.809vw, 23rem);
+}
+.background {
+  position: absolute;
+  z-index: -1;
+  block-size: 100%;
+  inline-size: 100%;
+  background-image: url(../images/back.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+.background-tracks {
+  position: absolute;
+  z-index: -1;
+  block-size: 730px;
+  inline-size: 100vw;
+  left: -375px;
+  background-image: url(../images/tracks.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 465px;
+}
+.background-japan {
+  top: -15%;
+  right: -25%;
+  background-size: contain;
+  background-image: url(../images/feedback-back.png);
+}
+.opening-hours {
+  position: relative;
+  padding-top: 2.5px;
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: clamp(0.875rem, 0.784rem + 0.388vw, 1.25rem);
+  line-height: 100%;
+  color: #ffffff;
+  margin-left: 52px;
+}
+
+.opening-hours::before {
+  content: "";
+  display: inline-block;
+  left: -54px;
+  width: 42px;
+  position: absolute;
+  height: 42px;
+  background-image: url(/images/icon-time.jpg);
+  border-radius: 50%;
+}
+
+.opening-hours-text {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(0.75rem, 0.72rem + 0.129vw, 0.875rem);
+  line-height: 100%;
+  color: #c6c6c6;
+  margin-bottom: 7px;
+}
+
+.navy {
+  display: flex;
+  justify-content: center;
+}
+
+.header__links-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+.header__links-list-item {
+  flex-basis: max-content;
+}
+.text__link {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: clamp(0.875rem, 0.814rem + 0.259vw, 1.125rem);
+  line-height: 100%;
+  color: #c6c6c6;
+  text-decoration: none;
+}
+.social-list-item {
+  display: block;
+  inline-size: max-content;
+  padding-top: 7px;
+}
+.social-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  margin-left: 40px;
+}
+
+.logo {
+  display: block;
+  margin-top: 5px;
+  margin-right: 0px;
+  block-size: clamp(2rem, 1.818rem + 0.777vw, 2.75rem);
+  inline-size: clamp(10.25rem, 9.249rem + 4.272vw, 14.375rem);
+}
+.logo-image {
+  inline-size: 100%;
+}
+.main-menu {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  margin-inline: 7px;
+  padding-top: 25px;
+  gap: clamp(0.313rem, -1.296rem + 6.861vw, 6.938rem);
+  margin-bottom: clamp(0.875rem, 0.162rem + 3.042vw, 3.813rem);
+}
+.main-menu-button {
+  display: none;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  background-image: url(../images/menu-button.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  cursor: pointer;
+}
+.main-menu-list {
+  display: flex;
+  padding-top: 16px;
+  padding-right: 6px;
+}
+.main-menu-list-item {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 100%;
+  margin-right: 26px;
+  color: #ffffff;
+}
+.main-menu-list-item:has(select) {
+  width: max-content;
+  margin-right: 17px;
+}
+.main-menu-list-item-point {
+  display: inline-block;
+  background-color: transparent;
+  color: #ffffff;
+  border: none;
+  inline-size: 13px;
+}
+.main-menu-order {
+  display: flex;
+  gap: 24px;
+}
+.main-menu-order-description {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 100%;
+  color: #363636;
+  text-align: right;
+  padding-top: 3px;
+  width: max-content;
+}
+.big_margin {
+  margin-bottom: 10px;
+}
+.main-menu-order-number {
+  font-weight: 500;
+  letter-spacing: 2%;
+  text-transform: uppercase;
+}
+.main-menu-order-button {
+  min-width: 193px;
+  height: 50px;
+  border: none;
+  background-color: #363636;
+  border-radius: 6px;
+
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.main-start-page {
+  display: grid;
+  position: relative;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+.main-start-page-link {
+  display: inline-block;
+  grid-column: 2;
+  position: absolute;
+  right: -40px;
+  top: 25px;
+}
+.main-start-page-container {
+  grid-column: 1;
+  grid-row: 1;
+  align-items: center;
+  padding-left: 7px;
+}
+
+.text-header {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: clamp(1.625rem, 1.291rem + 1.424vw, 3rem);
+  line-height: 120%;
+  color: #ffffff;
+  margin-bottom: clamp(0.875rem, 0.572rem + 1.294vw, 2.125rem);
+}
+.page-text {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(0.875rem, 0.814rem + 0.259vw, 1.125rem);
+  line-height: 160%;
+  color: #d9d9d9;
+  margin-bottom: 13px;
+}
+.text-highlight {
+  font-weight: 600;
+  line-height: 160%;
+  color: #ffffff;
+}
+
+.main-start-page-text:last-of-type {
+  margin-bottom: 0px;
+}
+.main-start-page-img {
+  inline-size: 100%;
+}
+.page-button {
+  block-size: 51px;
+  inline-size: 270px;
+  border: none;
+  border-radius: 6px;
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+}
+.button_container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 30px;
+  margin-top: 48px;
+  margin-bottom: 45px;
+}
+.bright-button {
+  background-color: #ffcc00;
+  color: #1f1f21;
+  box-shadow: 0 5px 0 #d69d0b;
+}
+.dim-button {
+  background-color: transparent;
+  outline: #ffcc00 solid 2px;
+  color: #ffcc00;
+}
+
+.about-price-cards {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-top: 4px;
+  gap: clamp(0.875rem, 0.632rem + 1.036vw, 1.875rem);
+}
+.about-price {
+  position: relative;
+  margin-top: 36px;
+  padding-left: 5px;
+  margin-right: calc(-1 * clamp(0.875rem, -4.371rem + 22.809vw, 23rem));
+  margin-bottom: clamp(4rem, 3.393rem + 2.589vw, 6.5rem);
+}
+.card {
+  display: block;
+  width: 370px;
+  flex-shrink: 0;
+  position: relative;
+  background-color: #272728;
+  block-size: min-content;
+  border-radius: 12px;
+  padding-top: clamp(2.25rem, 2.083rem + 0.712vw, 2.938rem);
+  padding-left: clamp(0.875rem, 0.723rem + 0.647vw, 1.5rem);
+  padding-right: clamp(1.438rem, 1.195rem + 1.036vw, 2.438rem);
+  padding-bottom: 23px;
+}
+
+.card-title {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: clamp(1.125rem, 1.034rem + 0.388vw, 1.5rem);
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: clamp(0.875rem, 0.465rem + 1.748vw, 2.563rem);
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(0.875rem, 0.814rem + 0.259vw, 1.125rem);
+  line-height: 160%;
+  color: #d9d9d9;
+}
+.text-bright {
+  color: #ffcc00;
+  font-weight: 700;
+}
+.not-uppercase {
+  text-transform: none;
+}
+.card-image-link {
+  display: block;
+  position: relative;
+  margin-bottom: clamp(2.25rem, 1.81rem + 1.877vw, 4.063rem);
+}
+.card-image-link::before {
+  position: absolute;
+  content: url(../images/outline.png);
+  block-size: 134px;
+  inline-size: 134px;
+  left: -10px;
+  top: -10px;
+}
+.about-price-cards .card:nth-of-type(3) .card-image-link {
+  margin-bottom: 49px;
+}
+.about-price-cards .card:nth-of-type(3) .card-title {
+  margin-bottom: clamp(0.875rem, 0.465rem + 1.748vw, 25px);
+}
+.about-price-cards .card:nth-of-type(3) .card-text {
+  padding-right: 20px;
+}
+.about-price-cards .card:nth-of-type(3) {
+  padding-bottom: 24px;
+}
+.card-text-list {
+  list-style: disc;
+  padding-left: 29px;
+  padding-top: 10px;
+}
+.card-text-list li {
+  margin-bottom: 15px;
+}
+.card-text-list li:last-child {
+  margin-bottom: 0px;
+}
+.about-price-container {
+  inline-size: 100%;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-template-rows: 1fr 1fr;
+  padding-right: clamp(0.875rem, -4.601rem + 23.366vw, 23.438rem);
+  margin-top: clamp(2.25rem, 1.006rem + 5.307vw, 7.375rem);
+}
+
+.about-price-container-header {
+  grid-column: 1;
+  grid-row: 1;
+  font-size: 36px;
+  padding-top: 8px;
+  padding-left: 5px;
+  margin-bottom: 0px;
+}
+.about-price-container-text {
+  grid-column: 2;
+  grid-row-start: 1;
+  grid-row-end: -1;
+  padding-top: 10px;
+  padding-left: clamp(1.313rem, 0.524rem + 3.366vw, 4.563rem);
+  padding-right: clamp(1.313rem, -0.341rem + 7.055vw, 8.125rem);
+}
+.about-price-container-button {
+  block-size: 46px;
+  inline-size: 270px;
+  align-self: center;
+  border: none;
+  border-radius: 6px;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  text-align: center;
+  color: #1f1f21;
+}
+.popular-car {
+  position: relative;
+  display: grid;
+  margin-left: 6px;
+}
+
+.popular-car-form {
+  display: flex;
+  width: 100%;
+  justify-content: start;
+  gap: 12px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+.popular-car-form__label {
+  display: inline-block;
+  block-size: clamp(2.625rem, 2.564rem + 0.259vw, 2.875rem);
+  border: solid 2px #262627;
+  border-radius: 2px;
+  padding-block: 14px;
+  padding-inline: 16px;
+  background-color: transparent;
+  color: #ffffff;
+}
+.popular-car-form__label:hover {
+  cursor: pointer;
+}
+.popular-car-form__label-text {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(0.875rem, 0.814rem + 0.259vw, 1.125rem);
+  line-height: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.popular-car-form__label:has(input:checked) {
+  background-color: #ffffff;
+  border: solid 2px transparent;
+  color: #262627;
+}
+.page-cards {
+  display: grid;
+  margin-top: 36px;
+  grid-template-columns: repeat(auto-fill, 370px);
+  gap: 30px;
+}
+.popular-car__button {
+  position: relative;
+  margin-top: 36px;
+  margin-bottom: 12px;
+  left: calc(-1 * clamp(0.875rem, 0.723rem + 0.647vw, 1.5rem));
+  border: none;
+  border-radius: 5px;
+  box-shadow: none;
+  padding-block: 18px;
+  padding-inline: 24px;
+  block-size: 60px;
+  inline-size: 215px;
+
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 100%;
+  color: #262627;
+}
+.page-cards .card-image-link {
+  margin-bottom: 13px;
+}
+.page-cards .card-text {
+  font-size: clamp(0.875rem, 0.845rem + 0.129vw, 1rem);
+  padding-left: 2px;
+}
+.page-cards .card {
+  padding-top: clamp(0.875rem, 0.602rem + 1.165vw, 2rem);
+}
+.page-cards .card-title {
+  margin-bottom: 26px;
+  padding-left: 3px;
+}
+.active {
+  display: block;
+}
+
+.page-cards .norm-weight {
+  font-weight: 400;
+  font-size: clamp(0.875rem, 0.814rem + 0.259vw, 1.125rem);
+}
+.page-cards .card:hover {
+  border: solid 2px rgba(251, 186, 34, 0.4);
+}
+
+.page-cards .card:hover .no-active,
+.page-cards .card:has(input:checked) .no-active {
+  display: block;
+  text-decoration: underline;
+  inline-size: calc(
+    100% + 2 * (clamp(0.875rem, 0.723rem + 0.647vw, 1.5rem) - 17px)
+  );
+  left: calc(clamp(0.875rem, 0.723rem + 0.647vw, 1.5rem) - 22px);
+}
+
+.page-cards .card:hover .active,
+.page-cards .card:has(input:checked) .active {
+  display: none;
+}
+
+.page-cards-checkbox {
+  display: block;
+  width: calc(
+    100% - clamp(0.875rem, 0.723rem + 0.647vw, 1.5rem) -
+      clamp(1.438rem, 1.195rem + 1.036vw, 2.438rem)
+  );
+  height: calc(100% - 24px - clamp(2.25rem, 2.083rem + 0.712vw, 2.938rem));
+  appearance: none;
+}
+
+.page-cards .card:has(.page-cards-checkbox:checked) {
+  border: solid 2px rgba(251, 186, 34, 1);
+  cursor: pointer;
+}
+
+.page-cards .card:has(.page-cards-checkbox:checked) button {
+  text-decoration: none;
+}
+
+.popular-car .page-cards .card-text p:first-of-type::before {
+  content: url("../images/key.png");
+}
+.popular-car .page-cards .card-text p:nth-of-type(2)::before {
+  content: url("../images/prev-car.png");
+}
+.popular-car .page-cards .card-text p:nth-of-type(3)::before {
+  content: url("../images/tires.png");
+}
+.popular-car .page-cards .card-text p:nth-of-type(4)::before {
+  content: url("../images/petrol.png");
+}
+.popular-car .page-cards .card-text p::before {
+  display: inline-block;
+  inline-size: 16px;
+  block-size: 16px;
+  margin-right: 2px;
+}
+.popular-car-button {
+  display: block;
+  margin-top: 33px;
+  justify-self: center;
+  width: 370px;
+  margin-right: 160px;
+}
+.popular-car-function {
+  display: flex;
+  gap: 25px;
+  grid-row: 2;
+  padding-top: 2px;
+  margin-bottom: 36px;
+}
+.popular-car-function button {
+  block-size: auto;
+  text-align: center;
+  padding-block: 18px;
+  padding-inline: 30px;
+}
+
+.work-stage {
+  position: relative;
+  margin-top: clamp(1.563rem, 0.061rem + 6.408vw, 7.75rem);
+  padding-left: 5px;
+}
+
+.work-stage .background-tracks {
+  top: -700px;
+}
+.work-stage .background-tracks:nth-of-type(1) {
+  top: 200px;
+}
+.work-stage .card:nth-child(n + 2):hover {
+  border: none;
+}
+.work-stage .card {
+  block-size: 266px;
+}
+.work-stage .resize {
+  block-size: 242px;
+}
+.work-stage .text-bright .norm-weight {
+  margin-bottom: 5px;
+}
+.work-stage .page-cards .card-title {
+  margin-bottom: 19px;
+}
+.work-stage .page-cards {
+  margin-top: 30px;
+  column-gap: 30px;
+  row-gap: 24px;
+}
+.work-stage button {
+  width: calc(100% + 0.25 * clamp(1.438rem, 1.195rem + 1.036vw, 2.438rem));
+  margin-left: 4px;
+  margin-top: clamp(1.5rem, 1.379rem + 0.518vw, 2rem);
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.work-stage .card:last-child {
+  clip-path: none;
+}
+.benefits {
+  position: relative;
+  width: 1170px;
+  background-image: url(../images/bg-benefit.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-top: clamp(4rem, 2.938rem + 4.531vw, 8.375rem);
+  padding-top: 50px;
+  padding-left: 54px;
+  padding-bottom: 18px;
+  border-radius: 6px;
+}
+.benefits .text-header {
+  margin-bottom: clamp(2.125rem, 1.913rem + 0.906vw, 3rem);
+}
+.benefits .benefits-title {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 100%;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+.benefits-text {
+  margin-bottom: clamp(1.188rem, 1.005rem + 0.777vw, 1.938rem);
+  font-weight: 600;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.reviews {
+  position: relative;
+  background-image: url(../images/reviews-back.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100vw;
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: 1fr 1fr;
+  column-gap: 101px;
+  padding-top: 240px;
+  padding-bottom: 117px;
+
+  margin-right: calc(-1 * clamp(0.875rem, -2.159rem + 12.945vw, 13.375rem));
+  margin-left: calc(-1 * clamp(0.875rem, -4.371rem + 22.809vw, 23rem));
+}
+.reviews-title {
+  position: relative;
+  display: inline;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  padding-top: 12px;
+  font-size: 48px;
+  line-height: 130%;
+  color: #1a1a1c;
+}
+.reviews-title .norm-weight {
+  font-weight: 500;
+}
+.reviews-title::before {
+  display: block;
+  content: url(../images/arrows.png);
+}
+.reviews-button {
+  display: block;
+  border: solid 2px #1a1a1c;
+  background-color: transparent;
+  margin-top: 33px;
+  grid-row: 2;
+  margin-left: calc(5px + clamp(0.875rem, -4.371rem + 22.809vw, 23rem));
+  grid-column: 1;
+}
+.reviews-cards {
+  position: relative;
+  display: flex;
+  gap: 30px;
+  grid-column: 2;
+  grid-row-start: 1;
+  grid-row-end: -1;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+.reviews-cards-link {
+  display: block;
+  position: relative;
+}
+.reviews-cards-link:hover .no-active {
+  display: flex;
+}
+.reviews-description {
+  display: inline-block;
+  margin-left: calc(5px + clamp(0.875rem, -4.371rem + 22.809vw, 23rem));
+  padding-top: 50px;
+  min-width: 400px;
+}
+
+.overlay {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  gap: 8px;
+  width: calc(100% + 1px);
+  height: 100%;
+  z-index: 1;
+  top: -3px;
+  left: 0px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(26, 26, 28, 0.85);
+  border-radius: 12px;
+}
+.no-active {
+  display: none;
+}
+.overlay-title {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 100%;
+  color: #ffffff;
+  text-align: center;
+}
+.overlay-text {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  color: #d9d9d9;
+}
+.overlay-link {
+  display: inline-block;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: #ffcc00;
+  margin-top: 24px;
+}
+.youtube {
+  padding-left: 5px;
+}
+.youtube .text-header {
+  position: relative;
+  display: block;
+  margin-bottom: 38px;
+}
+.youtube-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.youtube .text-header::after {
+  position: absolute;
+  content: url(../images/arrows2.png);
+  left: calc(100% - 2 * 164px);
+  top: -9px;
+}
+.iframe-wrapper {
+  inline-size: 370px;
+  block-size: 208px;
+  position: relative;
+}
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.iframe-wrapper::after {
+  position: absolute;
+  display: block;
+  content: "";
+  background-image: url("../images/pseudo-freim.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  inline-size: 100%;
+  min-block-size: 100%;
+  top: 0px;
+}
+.faq {
+  margin-top: clamp(4rem, 3.09rem + 3.883vw, 7.75rem);
+  margin-left: 5px;
+  margin-right: clamp(0.875rem, -1.34rem + 9.45vw, 10rem);
+}
+.faq-item {
+  display: flex;
+  block-size: 72px;
+  justify-content: space-between;
+  background-color: #262627;
+  padding: 22px;
+  align-items: center;
+  border-radius: 12px;
+  margin-bottom: clamp(0.875rem, 0.723rem + 0.647vw, 1.5rem);
+}
+.faq-item-text {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 600;
+  font-size: clamp(1.125rem, 1.034rem + 0.388vw, 1.5rem);
+  line-height: 100%;
+  color: #ffffff;
+  text-align: start;
+  width: 100%;
+}
+.faq-item:first-of-type {
+  margin-top: 40px;
+}
+.faq-item__pseudo-checkbox {
+  display: inline-block;
+  background-image: url("../images/open-checkbox.png");
+  width: 32px;
+  height: 32px;
+}
+.faq-item:hover {
+  outline: solid 2px rgba(251, 186, 34, 0.4);
+}
+.faq-item:has(input:checked) {
+  background-color: #ffcc00;
+  outline: solid 2px #ffcc00;
+  margin-bottom: 0px;
+  border-radius: 12px 12px 0px 0px;
+}
+.faq-item:has(input:checked) .faq-item-text {
+  color: #262627;
+}
+.faq-item:has(input:checked) .faq-item__pseudo-checkbox {
+  background-image: url("../images/close-checkbox.png");
+}
+.faq-item:has(input:checked) + .no-active {
+  display: block;
+}
+.faq-item-answer {
+  background-color: #262627;
+  padding: 22px;
+  outline: solid 2px #ffcc00;
+  border-radius: 0px 0px 12px 12px;
+  margin-bottom: clamp(0.875rem, 0.723rem + 0.647vw, 1.5rem);
+  padding-right: 5%;
+}
+.faq-button {
+  display: block;
+  margin-top: 43px;
+  justify-self: center;
+  width: 370px;
+}
+.feedback {
+  position: relative;
+  display: flex;
+  margin-left: 5px;
+  margin-top: clamp(4rem, 3.09rem + 3.883vw, 7.75rem);
+}
+.feedback-form {
+  display: flex;
+  border-radius: 12px;
+  flex-direction: column;
+  background-color: #272728;
+  padding-inline: clamp(0.875rem, 0.541rem + 1.424vw, 2.25rem);
+  padding-block: clamp(1.5rem, 1.318rem + 0.777vw, 2.25rem);
+}
+.feedback-form .text-header {
+  line-height: 100%;
+  margin-bottom: 24px;
+  margin-right: 24px;
+}
+.feedback .card-text {
+  margin-bottom: 18px;
+  gap: initial;
+}
+.feedback label:last-of-type {
+  margin-bottom: 0;
+}
+.feedback-form-field {
+  background-color: #171718;
+  border: none;
+  padding: 18px;
+}
+.feedback-form-field::placeholder {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  color: #6c6c6c;
+}
+.feedback-button {
+  margin-top: 36px;
+  margin-bottom: 22px;
+  width: 100%;
+}
+.feedback-contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 27px;
+  padding-top: 24px;
+}
+.feedback-text {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 100%;
+  color: #ffffff;
+  margin-bottom: 36px;
+}
+
+.feedback-title {
+  color: #ffcc00;
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.caption {
+  font-size: 14px;
+  line-height: 140%;
+}
+.feedback .feedback-title-caption {
+  margin-bottom: 36px;
+}
+.feedback-contacts .text-header {
+  margin-bottom: 24px;
+}
+.footer {
+  margin-top: 114px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #272728;
+  padding-block: 23px;
+  padding-right: calc(
+    clamp(0.875rem, -1.34rem + 9.45vw, 10rem) +
+      clamp(0.875rem, -2.159rem + 12.945vw, 13.375rem)
+  );
+  padding-left: clamp(0.875rem, -4.371rem + 22.809vw, 377px);
+}
+.footer .logo {
+  margin-top: 0px;
+  margin-left: 7px;
+}
+.footer .social-list {
+  margin-left: 47px;
+  margin-bottom: 8px;
+}
+.footer-text {
+  text-align: end;
+}
+.footer-text p {
+  text-transform: uppercase;
+}
+
+@media (width<=1550px) {
+  .popular-car-button {
+    margin-right: 15px;
+    margin-top: 44px;
+    margin-bottom: 24px;
+  }
+
+  .main-menu-order {
+    display: none;
+  }
+  .benefits {
+    width: 100%;
+  }
+}
+@media (width<=1050px) {
+  .social-list {
+    display: none;
+  }
+  .page-cards {
+    display: flex;
+    gap: 14px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+  .popular-car-function {
+    flex-direction: column;
+    align-items: center;
+  }
+  .page-button,
+  .about-price-container-button {
+    flex-basis: 51px;
+    inline-size: 347px;
+    font-size: 18px;
+  }
+  .reviews {
+    background-image: url("../images/review-back-portret.png");
+    margin-top: 62px;
+    padding-top: 52px;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content 1fr min-content;
+    padding-bottom: 0px;
+    padding-left: 14px;
+    background-size: cover;
+    background-position: left bottom;
+  }
+  .reviews-title {
+    font-size: 26px;
+    text-transform: uppercase;
+  }
+  .reviews-title::before {
+    display: none;
+  }
+  .reviews-description {
+    padding-top: 12px;
+    margin-left: 0px;
+    margin-bottom: 32px;
+    grid-row: 1;
+  }
+  .reviews-cards {
+    grid-column: 1;
+    grid-row: 2;
+    gap: 14px;
+    width: 90%;
+  }
+  .reviews-cards-link {
+    min-inline-size: 256px;
+    block-size: 346px;
+  }
+  .reviews-cards-link-img {
+    width: 100%;
+    height: 100%;
+  }
+  .reviews-button {
+    grid-row: 3;
+    background-color: #ffcc00;
+    margin-left: 0px;
+    border: none;
+    height: 46px;
+    margin-top: 37px;
+    box-shadow: 0 5px 0 #d69d0b;
+  }
+  .youtube .text-header::after {
+    display: none;
+  }
+  .feedback {
+    flex-direction: column;
+    margin-left: 0px;
+  }
+  .feedback-form .text-header {
+    line-height: 100%;
+    margin-bottom: 10px;
+    padding-top: 2px;
+  }
+  .feedback .feedback-title-caption {
+    margin-bottom: 32px;
+  }
+  .feedback-button {
+    margin-top: 32px;
+    margin-bottom: 14px;
+    inline-size: 100%;
+  }
+  .feedback .caption {
+    font-size: 12px;
+    display: inline;
+    margin-bottom: 8px;
+  }
+  .feedback-contacts {
+    padding: 0px;
+    margin-top: 33px;
+  }
+  .feedback-contacts .text-header {
+    margin-bottom: 30px;
+  }
+  .feedback-title {
+    margin-bottom: 14px;
+  }
+  .feedback-text {
+    margin-bottom: 24px;
+    font-size: 18px;
+  }
+}
+@media (width<=590px) {
+  .background-tracks {
+    display: none;
+  }
+  .header {
+    display: none;
+  }
+  .main-menu-list {
+    display: none;
+  }
+  .main-start-page {
+    display: flex;
+    flex-direction: column;
+  }
+  .button_container {
+    flex-direction: column;
+    gap: 22px;
+    margin-top: 22px;
+  }
+
+  .main-start-page-link {
+    margin-bottom: 66px;
+    position: relative;
+    top: -15px;
+    right: 20px;
+  }
+  .header .background {
+    background-image: url(/images/back-portret.png);
+  }
+  .background-japan {
+    display: none;
+  }
+  .main-menu-button {
+    display: block;
+  }
+  .main-menu {
+    justify-content: space-between;
+    margin-inline: 0px;
+    padding-top: 33px;
+  }
+  .main-start-page-container {
+    padding-left: 0px;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 36px;
+    width: 256px;
+    padding-right: 20px;
+  }
+  .card-image-link {
+    flex-shrink: 1;
+    height: 64px;
+  }
+  .popular-car .card-image-link {
+    block-size: 100%;
+    inline-size: 100%;
+    margin-bottom: 22px;
+  }
+  .card-image {
+    block-size: 100%;
+    inline-size: 100%;
+  }
+  .about-price {
+    padding-left: 0px;
+    margin-top: 18px;
+  }
+  .about-price .text-header {
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 1em;
+    padding-top: 3px;
+    padding-right: 85px;
+    margin-bottom: 30px;
+  }
+  .card-image-link::before {
+    top: -70px;
+    left: -70px;
+  }
+  .card-text-list {
+    padding-left: 20px;
+    padding-top: 32px;
+  }
+  .card-text {
+    gap: 12px;
+  }
+  .card-text-list li {
+    margin-bottom: 13px;
+  }
+  .card:last-child {
+    clip-path: polygon(25% 0, 100% 0%, 100% 100%, 0 100%, 0 15%);
+  }
+  .about-price-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 0px;
+  }
+  .about-price-container-header {
+    display: none;
+  }
+  .about-price-container-text {
+    padding: 0px;
+    margin-bottom: 18px;
+  }
+  .about-price-container-text .page-text {
+    font-size: 16px;
+    margin-bottom: 18px;
+  }
+  .popular-car .text-header {
+    padding-right: 15px;
+    font-size: 28px;
+    line-height: 105%;
+    margin-bottom: 28px;
+  }
+  .popular-car {
+    margin-left: 0px;
+    margin-right: calc(-1 * clamp(0.875rem, -4.371rem + 22.809vw, 23rem));
+  }
+  .popular-car .card-text {
+    gap: 17px;
+  }
+  .popular-car .card {
+    align-items: start;
+    padding-left: 10px;
+    padding-bottom: 22px;
+  }
+  .page-cards .card-text p::before {
+    margin-right: 4px;
+  }
+  .page-cards .card-title {
+    padding-left: 4px;
+    margin-bottom: 17px;
+  }
+
+  .popular-car-function {
+    display: flex;
+    gap: 25px;
+    grid-row: initial;
+    padding-top: 2px;
+    margin-bottom: 36px;
+    padding-right: 18px;
+  }
+  .popular-car .active {
+    background-color: transparent;
+    color: #ffcc00;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    margin-top: 0px;
+    padding-left: 16px;
+    text-align: start;
+    margin-bottom: 4px;
+  }
+  .popular-car .no-active {
+    display: block;
+    padding-block: 0px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    text-align: center;
+    background-color: #ffcc00;
+    color: #1f1f21;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    block-size: 46px;
+    inline-size: 100%;
+    margin-inline: 16px;
+  }
+  .work-stage {
+    padding-left: 0px;
+  }
+  .work-stage .card {
+    padding-top: 9px;
+    inline-size: 343px;
+  }
+  .work-stage .card:first-of-type {
+    block-size: 216px;
+    padding-bottom: 24px;
+  }
+  .work-stage .card:nth-of-type(n + 2) {
+    block-size: 164px;
+    padding-right: 38px;
+  }
+  .work-stage .page-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+  .work-stage .page-cards .card-title {
+    align-self: start;
+    padding-left: 0px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  .page-cards .card-text {
+    padding-left: 0px;
+  }
+  .work-stage button {
+    margin-bottom: 0px;
+  }
+  .benefits {
+    background-image: none;
+    background-color: #262627;
+    padding-left: 12px;
+    padding-top: 24px;
+    padding-bottom: 32px;
+  }
+  .benefits-text:last-of-type {
+    margin-bottom: 0px;
+  }
+  .benefits .benefits-title {
+    font-size: 18px;
+  }
+  .youtube {
+    margin-top: 67px;
+    padding-left: 0px;
+  }
+  .youtube .text-header {
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
+  .youtube-container {
+    gap: 14px;
+  }
+  .iframe-wrapper {
+    min-inline-size: 289px;
+    block-size: 208px;
+  }
+  .faq {
+    margin-inline: 0px;
+  }
+  .faq-item:first-of-type {
+    margin-top: 32px;
+  }
+  .faq-item {
+    padding-inline: 14px;
+    padding-block: 18px;
+    inline-size: 347px;
+    block-size: auto;
+  }
+  .faq-item-text {
+    line-height: 140%;
+  }
+  .faq .text-header {
+    line-height: 100%;
+  }
+  .faq-item-answer {
+    padding-right: 2%;
+    line-height: 27px;
+  }
+  .faq-item__pseudo-checkbox {
+    display: inline-block;
+    background-image: url("../images/open-checkbox.png");
+    background-size: cover;
+    width: 24px;
+    height: 24px;
+  }
+
+  .footer {
+    margin-top: 40px;
+    flex-direction: column;
+    padding-top: 36px;
+    gap: 25px;
+  }
+  .footer .social-list {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0px;
+    margin-left: 15px;
+    gap: 24px;
+  }
+  .footer .logo {
+    block-size: auto;
+  }
+  .footer .social-icon {
+    padding: 0px;
+    inline-size: 24px;
+    max-block-size: 24px;
+  }
+  .footer-text {
+    text-align: center;
+    margin-left: 12px;
+  }
+}
