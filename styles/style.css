@@ -37,6 +37,7 @@ body {
   position: relative;
   background-color: #171718;
   margin: 0px;
+  overflow-x: hidden;
 }
 .visually-hidden {
   position: absolute;
