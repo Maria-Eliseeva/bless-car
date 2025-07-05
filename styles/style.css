@@ -34,10 +34,12 @@ a {
 }
 
 body {
+  max-width: 1920px; /* Максимальная ширина макета */
+  margin: 0 auto; 
   position: relative;
   background-color: #171718;
-  margin: 0px;
   overflow-x: hidden;
+  box-sizing: border-box;
 }
 .visually-hidden {
   position: absolute;
@@ -68,27 +70,26 @@ body {
 .background {
   position: absolute;
   z-index: -1;
-  block-size: 100%;
-  inline-size: 100%;
+  block-size: 872px;
+  inline-size: 100vw;
   background-image: url(../images/back.png);
   background-repeat: no-repeat;
-  background-size: 100% auto;
 }
 .background-tracks {
   position: absolute;
   z-index: -1;
   block-size: 730px;
   inline-size: 100vw;
-  left: -375px;
+  left: calc(-1 * clamp(0.875rem, -4.371rem + 22.809vw, 23rem));
   background-image: url(../images/tracks.png);
   background-repeat: no-repeat;
   background-size: cover;
   top: 465px;
 }
 .background-japan {
-  top: -15%;
-  right: -25%;
+  top: -25%;
   background-size: contain;
+  inline-size: 1170px;
   background-image: url(../images/feedback-back.png);
 }
 .opening-hours {
@@ -110,7 +111,7 @@ body {
   width: 42px;
   position: absolute;
   height: 42px;
-  background-image: url(/images/icon-time.jpg);
+  background-image: url(../images/icon-time.jpg);
   border-radius: 50%;
 }
 
@@ -349,7 +350,6 @@ body {
   position: relative;
   margin-top: 36px;
   padding-left: 5px;
-  margin-right: calc(-1 * clamp(0.875rem, -4.371rem + 22.809vw, 23rem));
   margin-bottom: clamp(4rem, 3.393rem + 2.589vw, 6.5rem);
 }
 .card {
@@ -358,7 +358,6 @@ body {
   flex-shrink: 0;
   position: relative;
   background-color: #272728;
-  block-size: min-content;
   border-radius: 12px;
   padding-top: clamp(2.25rem, 2.083rem + 0.712vw, 2.938rem);
   padding-left: clamp(0.875rem, 0.723rem + 0.647vw, 1.5rem);
@@ -437,7 +436,7 @@ body {
   display: grid;
   grid-template-columns: 2fr 3fr;
   grid-template-rows: 1fr 1fr;
-  padding-right: clamp(0.875rem, -4.601rem + 23.366vw, 23.438rem);
+  padding-right: clamp(0.875rem, -4.601rem + 23.366vw, 120px);
   margin-top: clamp(2.25rem, 1.006rem + 5.307vw, 7.375rem);
 }
 
@@ -548,6 +547,8 @@ body {
 }
 .page-cards .card {
   padding-top: clamp(0.875rem, 0.602rem + 1.165vw, 2rem);
+  border:1px solid transparent;
+  transition: all 0.6s;
 }
 .page-cards .card-title {
   margin-bottom: 26px;
@@ -562,7 +563,7 @@ body {
   font-size: clamp(0.875rem, 0.814rem + 0.259vw, 1.125rem);
 }
 .page-cards .card:hover {
-  border: solid 2px rgba(251, 186, 34, 0.4);
+  outline: solid 2px rgba(251, 186, 34, 0.4);
 }
 
 .page-cards .card:hover .no-active,
@@ -582,6 +583,7 @@ body {
 
 .page-cards-checkbox {
   display: block;
+  position: absolute;
   width: calc(
     100% - clamp(0.875rem, 0.723rem + 0.647vw, 1.5rem) -
       clamp(1.438rem, 1.195rem + 1.036vw, 2.438rem)
@@ -653,12 +655,7 @@ body {
 .work-stage .card:nth-child(n + 2):hover {
   border: none;
 }
-.work-stage .card {
-  block-size: 266px;
-}
-.work-stage .resize {
-  block-size: 242px;
-}
+
 .work-stage .text-bright .norm-weight {
   margin-bottom: 5px;
 }
@@ -1042,7 +1039,12 @@ iframe {
 .footer-text p {
   text-transform: uppercase;
 }
-
+@media (width>2000px){
+  .background-tracks{
+    inline-size: 75vw;
+    
+  }
+}
 @media (width<=1550px) {
   .popular-car-button {
     margin-right: 15px;
@@ -1190,8 +1192,8 @@ iframe {
     top: -15px;
     right: 20px;
   }
-  .header .background {
-    background-image: url(/images/back-portret.png);
+  .header + .background {
+    background-image: url(../images/back-portret.png);
   }
   .background-japan {
     display: none;
@@ -1340,7 +1342,7 @@ iframe {
   }
   .work-stage .card {
     padding-top: 9px;
-    inline-size: 343px;
+    inline-size: 100%;
   }
   .work-stage .card:first-of-type {
     block-size: 216px;
@@ -1404,7 +1406,7 @@ iframe {
   .faq-item {
     padding-inline: 14px;
     padding-block: 18px;
-    inline-size: 347px;
+    inline-size: 100%;
     block-size: auto;
   }
   .faq-item-text {
