@@ -40,6 +40,8 @@ body {
   background-color: #171718;
   overflow-x: hidden;
   box-sizing: border-box;
+  min-width: 375px;
+  max-width: 1920px;
 }
 .visually-hidden {
   position: absolute;
@@ -71,7 +73,7 @@ body {
   position: absolute;
   z-index: -1;
   block-size: 872px;
-  inline-size: 100vw;
+  inline-size: min(1920px,100vw);
   background-image: url(../images/back.png);
   background-repeat: no-repeat;
 }
@@ -79,7 +81,7 @@ body {
   position: absolute;
   z-index: -1;
   block-size: 730px;
-  inline-size: 100vw;
+  inline-size:min(1920px,100vw);
   left: calc(-1 * clamp(0.875rem, -4.371rem + 22.809vw, 23rem));
   background-image: url(../images/tracks.png);
   background-repeat: no-repeat;
@@ -89,7 +91,7 @@ body {
 .background-japan {
   top: -25%;
   background-size: contain;
-  inline-size: 1170px;
+  max-inline-size: calc(min(1920px,100vw) - 2 * clamp(0.875rem, -2.159rem + 12.945vw, 13.375rem));
   background-image: url(../images/feedback-back.png);
 }
 .opening-hours {
@@ -1041,7 +1043,7 @@ iframe {
 }
 @media (width>2000px){
   .background-tracks{
-    inline-size: 75vw;
+    inline-size: min(1920px,75vw);
     
   }
 }
