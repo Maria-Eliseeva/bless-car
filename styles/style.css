@@ -2,6 +2,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  border: 1px solid #ffcc00;
 }
 
 html {
@@ -40,7 +41,6 @@ body {
   background-color: #171718;
   overflow-x: hidden;
   box-sizing: border-box;
-  min-width: 375px;
   max-width: 1920px;
 }
 .visually-hidden {
@@ -68,9 +68,11 @@ body {
 .main {
   padding-right: clamp(0.875rem, -2.159rem + 12.945vw, 13.375rem);
   padding-left: clamp(0.875rem, -4.371rem + 22.809vw, 23rem);
+  overflow-x: hidden;
 }
 .background {
   position: absolute;
+  background-size: contain;
   z-index: -1;
   block-size: 872px;
   inline-size: min(1920px,100vw);
@@ -1062,6 +1064,9 @@ iframe {
   }
 }
 @media (width<=1050px) {
+  .main {
+  padding: 14px;
+}
   .social-list {
     display: none;
   }
@@ -1195,7 +1200,9 @@ iframe {
     right: 20px;
   }
   .header + .background {
+    background-size: cover;
     background-image: url(../images/back-portret.png);
+     block-size: 753px;
   }
   .background-japan {
     display: none;
