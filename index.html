@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
+
   <body>
     <header class="header">
       <div class="opening-hours">
@@ -566,61 +567,18 @@
       </section>
       <section class="reviews">
         <div class="reviews-description">
+           <div class="reviewsButtonContainer">
+            <button class="swiper-button-prev"></button>
+            <button class="swiper-button-next"></button>
+          </div>
           <h2 class="reviews-title">
             Фото-Отзывы<br />
             <span class="norm-weight">наших покупателей</span>
           </h2>
-        </div>
         <button class="page-button reviews-button">Больше отзывов</button>
-        <div class="reviews-cards">
-          <div class="reviews-cards-link">
-            <img
-              class="reviews-cards-link-img"
-              alt="владимир, покупатель хонды"
-              src="./images/vladimir.png"
-            />
-            <div class="overlay no-active">
-              <p class="overlay-title">Владимир</p>
-              <p class="overlay-text">Honda Fit 2019 год</p>
-              <a href="" class="overlay-link">Подробнее</a>
-            </div>
-          </div>
-          <div class="reviews-cards-link">
-            <img
-              class="reviews-cards-link-img"
-              alt="покупатель мазды"
-              src="./images/customer2.png"
-            />
-            <div class="overlay no-active">
-              <p class="overlay-title">Имя</p>
-              <p class="overlay-text">Машина</p>
-              <a href="" class="overlay-link">Подробнее</a>
-            </div>
-          </div>
-          <div class="reviews-cards-link">
-            <img
-              class="reviews-cards-link-img"
-              alt="покупатель хонды"
-              src="./images/customer3.png"
-            />
-            <div class="overlay no-active">
-              <p class="overlay-title">Имя</p>
-              <p class="overlay-text">Машина</p>
-              <a href="" class="overlay-link">Подробнее</a>
-            </div>
-          </div>
-          <div class="reviews-cards-link">
-            <img
-              class="reviews-cards-link-img"
-              alt="покупатель хонды"
-              src="./images/customer4.png"
-            />
-            <div class="overlay no-active">
-              <p class="overlay-title">Имя</p>
-              <p class="overlay-text">Машина</p>
-              <a href="" class="overlay-link">Подробнее</a>
-            </div>
-          </div>
+        </div>
+        <div class="swiper" style="width: 100%; overflow: hidden">
+          <div class="reviews-cards swiper-wrapper"></div>
         </div>
       </section>
       <section class="youtube">
@@ -630,13 +588,13 @@
         </h2>
         <div class="youtube-container">
           <div class="iframe-wrapper">
-            <iframe src="" frameboarder="0"> </iframe>
+            <iframe src="" frameborder="0"> </iframe>
           </div>
           <div class="iframe-wrapper">
-            <iframe src="" frameboarder="0"> </iframe>
+            <iframe src="" frameborder="0"> </iframe>
           </div>
           <div class="iframe-wrapper">
-            <iframe src="" frameboarder="0"> </iframe>
+            <iframe src="" frameborder="0"> </iframe>
           </div>
         </div>
       </section>
@@ -884,5 +842,17 @@
         <a href="" class="card-text">Политика конфиденциальности</a>
       </div>
     </footer>
+
+    <template id="reviews-cards">
+      <div class="swiper-slide reviews-cards-link">
+        <img class="reviewsCardsLinkImg"/>
+        <div class="overlay no-active">
+          <p class="overlayTitle"></p>
+          <p class="overlayText"></p>
+          <a href="" class="overlayLink">Подробнее</a>
+        </div>
+      </div>
+    </template>
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>

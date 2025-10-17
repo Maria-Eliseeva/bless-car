@@ -1,8 +1,8 @@
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-  border: 1px solid #ffcc00;
 }
 
 html {
@@ -722,10 +722,8 @@ body {
   background-image: url(../images/reviews-back.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100vw;
   display: grid;
   grid-template-columns: min-content 1fr;
-  grid-template-rows: 1fr 1fr;
   column-gap: 101px;
   padding-top: 240px;
   padding-bottom: 117px;
@@ -747,17 +745,13 @@ body {
 .reviews-title .norm-weight {
   font-weight: 500;
 }
-.reviews-title::before {
-  display: block;
-  content: url(../images/arrows.png);
-}
 .reviews-button {
   display: block;
   border: solid 2px #1a1a1c;
   background-color: transparent;
   margin-top: 33px;
   grid-row: 2;
-  margin-left: calc(5px + clamp(0.875rem, -4.371rem + 22.809vw, 23rem));
+  margin-left: 14px;
   grid-column: 1;
 }
 .reviews-cards {
@@ -768,15 +762,17 @@ body {
   grid-row-start: 1;
   grid-row-end: -1;
   flex-wrap: nowrap;
-  overflow-x: auto;
-  padding-bottom:124px;
+  padding-block:124px;
 }
 .reviews-cards-link {
   display: block;
   position: relative;
+  height: max-content;
 }
+
 .reviews-cards-link:hover .no-active {
   display: flex;
+  outline:1px solid #d69d0b ;
 }
 .reviews-description {
   display: inline-block;
@@ -791,10 +787,10 @@ body {
   flex-direction: column;
   gap: 8px;
   width: calc(100% + 1px);
-  height: 100%;
+  height: calc(100% - 1px);
   z-index: 1;
-  top: -3px;
-  left: 0px;
+  top: 1px;
+  left: 1px;
   justify-content: center;
   align-items: center;
   background-color: rgb(26, 26, 28, 0.85);
@@ -803,7 +799,7 @@ body {
 .no-active {
   display: none;
 }
-.overlay-title {
+.overlayTitle {
   font-family: "Rubik";
   font-style: normal;
   font-weight: 600;
@@ -812,7 +808,7 @@ body {
   color: #ffffff;
   text-align: center;
 }
-.overlay-text {
+.overlayText {
   font-family: "Rubik";
   font-style: normal;
   font-weight: 400;
@@ -820,7 +816,7 @@ body {
   line-height: 100%;
   color: #d9d9d9;
 }
-.overlay-link {
+.overlayLink {
   display: inline-block;
   font-family: "Rubik";
   font-style: normal;
@@ -1101,9 +1097,6 @@ iframe {
     font-size: 26px;
     text-transform: uppercase;
   }
-  .reviews-title::before {
-    display: none;
-  }
   .reviews-description {
     padding-top: 12px;
     margin-left: 0px;
@@ -1120,7 +1113,7 @@ iframe {
     min-inline-size: 256px;
     block-size: 346px;
   }
-  .reviews-cards-link-img {
+  .reviewsCardsLinkImg {
     width: 100%;
     height: 100%;
   }
@@ -1461,4 +1454,28 @@ iframe {
     text-align: center;
     margin-left: 12px;
   }
+}
+
+.swiper-button-next, .swiper-button-prev{
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  background-image: url(../images/arrows.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.swiper-button-next {
+  transform: rotate(180deg);
+}
+.swiper-navigation-icon {
+  display: none;
+}
+.swiper-button-disabled {
+  opacity: 0.3;
+  pointer-events: none;
+  filter: grayscale(1);
 }
