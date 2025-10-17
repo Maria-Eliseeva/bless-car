@@ -1101,7 +1101,6 @@ iframe {
   }
   .reviews-description {
     padding-top: 12px;
-    margin-left: 0px;
     margin-bottom: 32px;
     grid-row: 1;
   }
@@ -1458,6 +1457,7 @@ iframe {
 
 .swiper-button-next, .swiper-button-prev,
 .youtubeSwiperButton-next, .youtubeSwiperButton-prev{
+  position: relative;
   width: 40px;
   height: 40px;
   border: none;
@@ -1468,7 +1468,7 @@ iframe {
   background-size: contain;
   cursor: pointer;
 }
-.youtubeSwiperButton-next,.youtubeSwiperButton-prev {
+.youtubeSwiperButton-next, .youtubeSwiperButton-prev {
     background-image: url(../images/arrows2.png);
 }
 .swiper-button-next, .youtubeSwiperButton-next {
@@ -1476,6 +1476,12 @@ iframe {
 }
 .swiper-navigation-icon {
   display: none;
+}
+div .swiper-button-prev:after,div .swiper-button-next:after{
+content: '';
+}
+div .swiper-button-next,div .swiper-button-prev{
+  position: relative;
 }
 .swiper-button-disabled {
   opacity: 0.3;
@@ -1486,4 +1492,14 @@ iframe {
   width: 100%; 
   overflow: hidden; 
   padding-right: 124px;
+}
+div .swiper-slide{
+  width: initial;
+}
+div .swiper-wrapper{
+  height: fit-content;
+}
+.SwiperButtonContainer{
+  display: flex;
+  gap:40px;
 }
