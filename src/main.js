@@ -1,4 +1,3 @@
-import Swiper from "swiper/bundle";
 
 const reviewCardsContainer = document.querySelector(".reviews-cards");
 const reviewCardTemp = document.getElementById("reviews-cards").content;
