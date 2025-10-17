@@ -68,7 +68,6 @@ body {
 .main {
   padding-right: clamp(0.875rem, -2.159rem + 12.945vw, 13.375rem);
   padding-left: clamp(0.875rem, -4.371rem + 22.809vw, 23rem);
-  overflow-x: hidden;
 }
 .background {
   position: absolute;
