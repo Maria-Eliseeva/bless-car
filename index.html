@@ -567,7 +567,7 @@
       </section>
       <section class="reviews">
         <div class="reviews-description">
-           <div class="reviewsButtonContainer">
+           <div class="SwiperButtonContainer">
             <button class="swiper-button-prev"></button>
             <button class="swiper-button-next"></button>
           </div>
@@ -577,25 +577,23 @@
           </h2>
         <button class="page-button reviews-button">Больше отзывов</button>
         </div>
-        <div class="swiper" style="width: 100%; overflow: hidden">
+        <div class="reviewSwiper swiper">
           <div class="reviews-cards swiper-wrapper"></div>
         </div>
       </section>
       <section class="youtube">
-        <h2 class="text-header">
+        <div class="youtube-description">      
+          <h2 class="text-header">
           Наш
           <span class="text-bright">YouTube канал</span>
-        </h2>
-        <div class="youtube-container">
-          <div class="iframe-wrapper">
-            <iframe src="" frameborder="0"> </iframe>
+        </h2> 
+        <div class="SwiperButtonContainer">
+            <button class="youtubeSwiperButton-prev"></button>
+            <button class="youtubeSwiperButton-next"></button>
           </div>
-          <div class="iframe-wrapper">
-            <iframe src="" frameborder="0"> </iframe>
-          </div>
-          <div class="iframe-wrapper">
-            <iframe src="" frameborder="0"> </iframe>
-          </div>
+        </div>
+        <div class="youtubeSwiper swiper">
+          <div class="youtube-container swiper-wrapper"></div>
         </div>
       </section>
       <section class="faq">
@@ -853,6 +851,13 @@
         </div>
       </div>
     </template>
+
+     <template id ="youtubeTemp">
+      <div class="swiper-slide iframeWrapper">
+            <iframe class="iframeCard"> </iframe>
+          </div>
+    </template>
+
     <script type="module" src="./src/main.js"></script>
   </body>
 </html>

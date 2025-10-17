@@ -282,6 +282,7 @@ body {
 }
 
 .text-header {
+  width: max-content;
   font-family: "Rubik", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -828,26 +829,24 @@ body {
 .youtube {
   padding-left: 5px;
 }
+.youtube-description{
+  display: flex;
+  justify-content: space-between;
+}
 .youtube .text-header {
   position: relative;
   display: block;
   margin-bottom: 38px;
 }
 .youtube-container {
+  position: relative;
   display: flex;
   gap: 30px;
   flex-wrap: nowrap;
-  overflow-x: auto;
-  overflow-y: hidden;
 }
-.youtube .text-header::after {
-  position: absolute;
-  content: url(../images/arrows2.png);
-  left: calc(100% - 2 * 164px);
-  top: -9px;
-}
-.iframe-wrapper {
-  inline-size: 370px;
+
+.iframeWrapper {
+  min-inline-size: 370px;
   block-size: 208px;
   position: relative;
 }
@@ -856,7 +855,7 @@ iframe {
   height: 100%;
   border: none;
 }
-.iframe-wrapper::after {
+.iframeWrapper::after {
   position: absolute;
   display: block;
   content: "";
@@ -881,6 +880,9 @@ iframe {
   align-items: center;
   border-radius: 12px;
   margin-bottom: clamp(0.875rem, 0.723rem + 0.647vw, 1.5rem);
+}
+.faq-item:hover, faq-item-text:hover{
+  cursor: pointer;
 }
 .faq-item-text {
   font-family: "Rubik";
@@ -1124,9 +1126,6 @@ iframe {
     height: 46px;
     margin-top: 37px;
     box-shadow: 0 5px 0 #d69d0b;
-  }
-  .youtube .text-header::after {
-    display: none;
   }
   .feedback {
     flex-direction: column;
@@ -1394,7 +1393,7 @@ iframe {
   .youtube-container {
     gap: 14px;
   }
-  .iframe-wrapper {
+  .iframeWrapper {
     min-inline-size: 289px;
     block-size: 208px;
   }
@@ -1455,7 +1454,8 @@ iframe {
   }
 }
 
-.swiper-button-next, .swiper-button-prev{
+.swiper-button-next, .swiper-button-prev,
+.youtubeSwiperButton-next, .youtubeSwiperButton-prev{
   width: 40px;
   height: 40px;
   border: none;
@@ -1466,8 +1466,10 @@ iframe {
   background-size: contain;
   cursor: pointer;
 }
-
-.swiper-button-next {
+.youtubeSwiperButton-next,.youtubeSwiperButton-prev {
+    background-image: url(../images/arrows2.png);
+}
+.swiper-button-next, .youtubeSwiperButton-next {
   transform: rotate(180deg);
 }
 .swiper-navigation-icon {
@@ -1477,4 +1479,9 @@ iframe {
   opacity: 0.3;
   pointer-events: none;
   filter: grayscale(1);
+}
+.swiper{
+  width: 100%; 
+  overflow: hidden; 
+  padding-right: 124px;
 }

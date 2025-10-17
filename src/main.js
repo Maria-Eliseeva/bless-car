@@ -1,7 +1,10 @@
-import Swiper from 'swiper/bundle';
+import Swiper from "swiper/bundle";
 
 const reviewCardsContainer = document.querySelector(".reviews-cards");
-const cardTemp = document.getElementById("reviews-cards").content;
+const reviewCardTemp = document.getElementById("reviews-cards").content;
+
+const youtubeCardsContainer = document.querySelector(".youtube-container");
+const youtubeCardTemp = document.getElementById("youtubeTemp").content;
 
 const reviewCardsData = [
   {
@@ -43,7 +46,7 @@ const reviewCardsData = [
       overlayText: "Honda Fit 2019 год",
     },
   },
-   {
+  {
     setAttribute: {
       overlayLink: { alt: "" },
       reviewsCardsLinkImg: {
@@ -55,32 +58,72 @@ const reviewCardsData = [
       overlayTitle: "Владимир",
       overlayText: "Honda Fit 2019 год",
     },
-  }
+  },
 ];
 
-reviewCardsData.forEach((item) => {
-  const cloneCard = cardTemp.cloneNode(true);
-  const reviewCard = cloneCard.firstElementChild;
+const youtubeCardsData = [
+  {
+    setAttribute: {
+      iframeCard: { src: "", frameborder: "0" },
+    },
+  },
+  {
+    setAttribute: {
+      iframeCard: { src: "", frameborder: "0" },
+    },
+  },
+  {
+    setAttribute: {
+      iframeCard: { src: "", frameborder: "0" },
+    },
+  },
+  {
+    setAttribute: {
+      iframeCard: { src: "", frameborder: "0" },
+    },
+  },
+];
 
-  Object.entries(item.textContent).forEach(([key, value]) => {
-    reviewCard.querySelector(`.${key}`).textContent = value;
-  });
+const FillCardsTemp = (data, cardTemp, container) => {
+  data.forEach((item) => {
+    const cloneCard = cardTemp.cloneNode(true);
+    const card = cloneCard.firstElementChild;
 
-  Object.entries(item.setAttribute).forEach(([className, value]) => {
-    Object.keys(value).forEach((attribute) => {
-      reviewCard
-        .querySelector(`.${className}`)
-        .setAttribute(attribute, value[attribute]);
+    if (item.textContent){
+    Object.entries(item.textContent).forEach(([className, text]) => {
+      card.querySelector(`.${className}`).textContent = text;
     });
+  }
+   if (item.setAttribute){
+    Object.entries(item.setAttribute).forEach(([className, options]) => {
+      Object.keys(options).forEach((attribute) => {
+        card
+          .querySelector(`.${className}`)
+          .setAttribute(attribute, options[attribute]);
+      });
+    });
+  }
+    container.appendChild(card);
   });
 
-  reviewCardsContainer.appendChild(reviewCard);
-});
+};
 
-const swiper = new Swiper('.swiper', {
-  slidesPerView: 'auto',
+FillCardsTemp(reviewCardsData,reviewCardTemp,reviewCardsContainer);
+FillCardsTemp(youtubeCardsData,youtubeCardTemp,youtubeCardsContainer);
+
+const reviewSwiper = new Swiper(".reviewSwiper", {
+  slidesPerView: "auto",
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
 });
+
+const youtubeSwiper = new Swiper(".youtubeSwiper",{
+  slidesPerView: "auto",
+  navigation: {
+    nextEl: ".youtubeSwiperButton-next",
+    prevEl: ".youtubeSwiperButton-prev",
+  },
+})
+
