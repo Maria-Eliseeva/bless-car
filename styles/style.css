@@ -628,9 +628,8 @@ body {
 .popular-car-button {
   display: block;
   margin-top: 33px;
-  justify-self: center;
+  justify-self: start;
   width: 370px;
-  margin-right: 160px;
 }
 .popular-car-function {
   display: flex;
@@ -1050,7 +1049,7 @@ iframe {
 }
 @media (width<=1550px) {
   .popular-car-button {
-    margin-right: 15px;
+
     margin-top: 44px;
     margin-bottom: 24px;
   }
@@ -1097,7 +1096,7 @@ iframe {
     background-position: left bottom;
   }
   .reviews-title {
-    font-size: 26px;
+    font-size: 20px;
     text-transform: uppercase;
   }
   .reviews-description {
@@ -1239,7 +1238,7 @@ iframe {
   }
   .about-price .text-header {
     font-weight: 700;
-    font-size: 34px;
+    font-size: 26px;
     line-height: 1em;
     padding-top: 3px;
     padding-right: 85px;
@@ -1313,6 +1312,7 @@ iframe {
     padding-top: 2px;
     margin-bottom: 36px;
     padding-right: 18px;
+    align-items: start;
   }
   .popular-car .active {
     background-color: transparent;
@@ -1327,7 +1327,6 @@ iframe {
   }
   .popular-car .no-active {
     display: block;
-    padding-block: 0px;
     font-weight: 400;
     font-size: 18px;
     line-height: 100%;
